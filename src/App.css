@@ -1,0 +1,56 @@
+.main-contianer {
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+}
+
+.modal-title {
+  font-weight: 900;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.modal-col {
+  padding: 20px;
+  max-width: 50%;
+}
+
+.col-title {
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.google-address {
+  border: none;
+}
+
+.google-address-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
