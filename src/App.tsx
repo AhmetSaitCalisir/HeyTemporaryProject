@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import mainSvg from "./assets/main.svg";
 import { TfiInstagram, TfiLocationPin, TfiMobile } from "react-icons/tfi";
+import { Helmet } from "react-helmet";
 
 const App = () => {
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
   });
+  const [title, setTitle] = useState("HEY! Reklam Ajansı");
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -21,11 +23,27 @@ const App = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTitle((previous) =>
+        previous === "Çok Yakında!" ? "HEY! Reklam Ajansı" : "Çok Yakında!"
+      );
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="main-contianer">
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
       <div className="modal">
         <div className="modal-title">
-          <img src={mainSvg} alt="React Logo" width={windowSize.width * 0.7} />
+          <img
+            src={mainSvg}
+            alt="HEY REKLAM AJANSI"
+            width={windowSize.width * 0.7}
+          />
         </div>
         <div className="modal-container">
           <button
