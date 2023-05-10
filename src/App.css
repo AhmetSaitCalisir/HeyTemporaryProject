@@ -1,70 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Montserrat:wght@700&display=swap");
 
-/* .main-contianer {
-} */
-
-.modal {
-  background-color: white;
-  padding: 20px;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
-    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-  border-radius: 20px;
-}
-
-.modal-title {
-  font-weight: 900;
+.main-contianer {
+  padding-inline: 10%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-content: center;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-content: center;
 }
 
-.modal-container {
+.top-logos {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.modal-col {
-  padding: 20px;
+.mini-logos {
+  min-width: 135px;
   max-width: 50%;
 }
 
-.col-title {
-  font-weight: 600;
+.main-logo-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  padding-inline: 20%;
+  max-width: 90%;
 }
 
-.google-address {
-  border: none;
+.main-logo {
+  background-color: #fff;
 }
 
-.google-address-container {
+.buttons-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  margin-top: 20px;
 }
 
-.modal-button {
+.button {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border: none;
   border-radius: 20px;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -72,13 +60,17 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: 500ms ease-in-out;
+  transition: 300ms ease-in-out;
   background-color: #fcb900;
   color: white;
+  min-width: 120px;
+  margin: 10px;
+  flex: 1;
+  white-space: nowrap;
 }
 
-.modal-button:hover {
-  scale: 1.2;
+.button:hover {
+  scale: 1.1;
   background-color: #ff9900;
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
     rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;

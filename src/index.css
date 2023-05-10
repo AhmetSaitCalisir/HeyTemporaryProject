@@ -1,12 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Montserrat:wght@700&display=swap");
 body {
-  background-color: #fcb900;
+  background-color: #ffffff;
   height: 98vh;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  align-items: center;
-  font-family: "Montserrat", sans-serif;
 }

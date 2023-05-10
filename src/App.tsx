@@ -1,7 +1,15 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import mainSvg from "./assets/main.svg";
-import { TfiInstagram, TfiLocationPin, TfiMobile } from "react-icons/tfi";
+import leftLogo from "./assets/leftLogo.svg";
+import rightLogo from "./assets/rightLogo.svg";
+import {
+  FiInstagram,
+  FiMail,
+  FiMapPin,
+  FiMessageCircle,
+  FiPhoneCall,
+} from "react-icons/fi";
 import { Helmet } from "react-helmet";
 
 const App = () => {
@@ -37,38 +45,72 @@ const App = () => {
       <Helmet>
         <title>{title}</title>
       </Helmet>
-      <div className="modal">
-        <div className="modal-title">
-          <img
-            src={mainSvg}
-            alt="HEY REKLAM AJANSI"
-            width={windowSize.width * 0.7}
-          />
-        </div>
-        <div className="modal-container">
-          <button
-            className="modal-button"
-            onClick={() => {
-              window.open("https://goo.gl/maps/SeuM1CNcpvJ11QWb9");
-            }}
-          >
-            <TfiLocationPin /> &nbsp;Konumumuz
-          </button>
-          <button
-            className="modal-button"
-            onClick={() => window.open("tel:+905010324391")}
-          >
-            <TfiMobile /> &nbsp;+90 (501) 032 43 91
-          </button>
-          <button
-            className="modal-button"
-            onClick={() => {
-              window.open("https://www.instagram.com/hey1creative");
-            }}
-          >
-            <TfiInstagram /> &nbsp;Instagram
-          </button>
-        </div>
+      <div className="top-logos">
+        <img
+          src={leftLogo}
+          alt="HEY REKLAM AJANSI"
+          width={windowSize.width * 0.12}
+          className="mini-logos"
+        />
+        <img
+          src={rightLogo}
+          alt="UÇMAK İÇİN HAZIRIZ"
+          width={windowSize.width * 0.12}
+          className="mini-logos"
+        />
+      </div>
+      <div className="main-logo-container">
+        <img
+          src={mainSvg}
+          alt="HEY REKLAM AJANSI"
+          width={
+            windowSize.width > 700
+              ? windowSize.width * 0.45
+              : windowSize.width * 0.9
+          }
+          className="main-logo"
+        />
+      </div>
+      <div className="buttons-container">
+        <button
+          className="button"
+          onClick={() => {
+            window.open("https://goo.gl/maps/SeuM1CNcpvJ11QWb9");
+          }}
+        >
+          <FiMapPin /> &nbsp;Konumumuz
+        </button>
+
+        <button
+          className="button"
+          onClick={() => {
+            window.open("https://www.instagram.com/heyreklamajansi/");
+          }}
+        >
+          <FiInstagram /> &nbsp;Instagram
+        </button>
+        <button
+          className="button"
+          onClick={() => {
+            window.open("https://www.instagram.com/hey1creative");
+          }}
+        >
+          <FiMessageCircle /> &nbsp;WhatsApp
+        </button>
+        <button
+          className="button"
+          onClick={() => {
+            window.open("mailto:info@heyreklamajansi.com");
+          }}
+        >
+          <FiMail /> &nbsp;Mail
+        </button>
+        <button
+          className="button"
+          onClick={() => window.open("tel:+905010324391")}
+        >
+          <FiPhoneCall /> &nbsp;+90 (501) 032 43 91
+        </button>
       </div>
     </div>
   );
