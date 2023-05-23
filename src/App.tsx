@@ -92,7 +92,7 @@ const App = () => {
         <button
           className="button"
           onClick={() => {
-            window.open("https://www.instagram.com/hey1creative");
+            window.open("https://wa.me/message/ILVCON56FNLAP1");
           }}
         >
           <FiMessageCircle /> &nbsp;WhatsApp
